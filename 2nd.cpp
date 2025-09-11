@@ -18,5 +18,5 @@ int main(){
         cout<<arr[i]<<" ,";
     }
     cout<< "}"<<endl;
-    cout<<"sum is "<<sums;
+    cout<<"sum is "<<sums<<endl;
 }
