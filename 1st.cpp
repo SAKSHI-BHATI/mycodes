@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i =1;i<=n;i++){
+        cout<<string(n-i,' ')<<string(i,'#')<<endl;//for char+' ',for large word =" "
+    }
+    return 1;
+}
