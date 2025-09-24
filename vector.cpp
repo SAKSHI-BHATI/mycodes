@@ -52,6 +52,19 @@ vector<int> gradingStudents(vector<int> grades) {
     } return grades;
 
 }
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+    int no_apples=0;
+    int no_oranges =0;
+    for (int i =0;i<apples.size();i++){
+        apples[i] += a;
+        if (s<=apples[i]&&apples[i]<=t) ++no_apples;
+    }for (int i =0;i<oranges.size();i++){
+        oranges[i] +=b;
+        if(s<=oranges[i]&&oranges[i]<=t) ++no_oranges;
+    }cout<<no_apples<<endl<<no_oranges;
+    return;
+
+}
 
 
 };
