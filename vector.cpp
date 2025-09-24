@@ -34,6 +34,16 @@ long total =arr[0];
     cout<<min_sum<<" "<<max_sum<<endl;
 
 }
+int birthdayCakeCandles(vector<int> candles) {
+    long tallest=candles[0];
+    int count =1;
+    for(int i =1;i<candles.size();i++){
+        if(tallest <candles[i]){
+            tallest =candles[i];
+            count =1;
+        }else if (candles[i]==tallest) ++count;
+    }return count;
+}
 
 
 };
