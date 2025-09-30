@@ -122,6 +122,14 @@ SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
 
 }
 
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+    SinglyLinkedListNode* nn = new SinglyLinkedListNode(data);
+    nn->next=llist;
+    llist =nn;
+    return llist;
+
+}
+
 
 
 
