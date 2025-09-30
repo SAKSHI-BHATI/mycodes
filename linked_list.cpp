@@ -108,6 +108,20 @@ void printLinkedList(SinglyLinkedListNode* head) {
 }
 
 
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
+    SinglyLinkedListNode* nn = new SinglyLinkedListNode(data);
+    if (head ==nullptr){
+        head = nn;
+        return head;
+    }
+    SinglyLinkedListNode* temp  = head;
+    while (temp->next!= nullptr){
+        temp=temp->next;
+    }temp ->next =nn;
+    return head;
+
+}
+
 
 
 
