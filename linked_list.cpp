@@ -130,6 +130,27 @@ SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
 
 }
 
+SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* llist, int data, int position) {
+    SinglyLinkedListNode* nn  = new SinglyLinkedListNode(data);
+    SinglyLinkedListNode* temp = llist;
+    int count =1;
+    if (position == 1){
+        nn->next = llist;
+        llist = nn;
+     }
+     while (temp != nullptr && count <position){
+        temp =temp->next;
+        ++count;
+     }if (temp==nullptr  ){
+        cout<<" position out of bound"<<endl;
+        return llist;
+     }
+        nn ->next = temp->next ;
+        temp ->next = nn;
+     
+     return llist;
+}
+
 
 
 
