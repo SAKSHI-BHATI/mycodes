@@ -13,7 +13,8 @@ using namespace std;
 
 int* breakingRecords(int scores_count, int* scores, int* result_count) {
     // Allocate memory for result array: [max_breaks, min_breaks]
-    int *result = malloc(2 * sizeof(int));
+    int *result = new int[2];
+
     *result_count = 2;
 
     int max_score = scores[0];
